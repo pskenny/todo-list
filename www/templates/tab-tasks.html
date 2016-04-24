@@ -1,0 +1,19 @@
+<ion-view view-title="Tasks">
+    <ion-content>
+        <label class="item item-input">
+            <input type="text" placeholder="Enter task" ng-model="val.task">
+        </label>
+        <button class="button button-block button-positive" ng-click="addTask()">
+            Add Task
+        </button>
+        </br>
+        <ion-list>
+            <ion-item ng-repeat="task in data.tasks" >
+                <h3>{{task.title}}</h3>
+                <ion-option-button class="button-assertive" ng-click="removeTask(task.title)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
